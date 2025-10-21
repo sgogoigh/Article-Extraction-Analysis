@@ -1,0 +1,27 @@
+Building Custom TFLite Models and Benchmarking on VOXL2 Chips
+
+A leading tech consulting firm in the USA
+
+
+IT Consulting, IT Support, SaaS
+The client aimed to explore the development and deployment of custom TensorFlow Lite (TFLite) models on VOXL2 hardware. The goal was to leverage the advanced GPU and NPU acceleration capabilities of VOXL2 to optimize and benchmark these models for efficient on-device inference. This project was not only about showcasing the potential of VOXL2 in enhancing machine learning performance but also about contributing to the broader understanding of deploying custom models on edge devices.
+Steps were followed as referred in the Modal AI documentation. No solution architecture was required here.
+This project has not only contributed to the broader understanding of deploying custom models on edge devices but has also provided valuable insights into the performance of these models on VOXL chips. The process of overcoming technical challenges has further solidified the client’s confidence in the capabilities of VOXL2 and the potential of deploying custom TFLite models on edge devices.
+Overall, the Manu B VOXL project has been a success, demonstrating the potential of VOXL2 in enhancing machine learning performance on edge devices and contributing to the broader understanding of deploying custom models on edge devices. The project has highlighted the importance of overcoming technical challenges and the value of comprehensive guides for deploying and benchmarking TFLite models on VOXL chips.
+Forum :: https://forum.modalai.com/topic/3103/need-help-simulating-tflite-yolo-models-on-my-linux-machine/4?_=1711183909164
+https://docs.google.com/document/d/17qVUzjCz3UKWB_-0fuBJzZAbdOULbp2a1U7b2Il3V78/edit
+Summarized: https://blackcoffer.com/
+This project was done by the Blackcoffer Team, a Global IT Consulting firm.
+This solution was designed and developed by Blackcoffer Team
+
+
+Here are my contact details:
+Firm Name: Blackcoffer Pvt. Ltd.
+Firm Website: www.blackcoffer.com
+Firm Address: 4/2, E-Extension, Shaym Vihar Phase 1, New Delhi 110043
+Email: ajay@blackcoffer.com
+WhatsApp: +91 9717367468
+Telegram: @asbidyarthy
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

@@ -1,0 +1,14 @@
+A Leading Firm in the USA, SEO and Website Optimization
+
+A leading marketing firm in the USA
+
+
+Connect website to Search Console. Add Call Rail Code
+Connecting website to Google Search Console through Google Tag Manager.
+Connect website with CallRail.
+Website connected to Google Search Console successfully.
+Added CallRail code to the website.
+https://www.12stonesnwa.com/
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

@@ -1,0 +1,32 @@
+Efficient Coach Allocation System for Sports Coaching Organization
+
+A leading sports tech firm in the USA
+
+
+IT Consulting, Sports SaaS, Sports Management
+The sports coaching organization, Esra Salih, faced the challenge of efficiently allocating coaches to various programs across different schools. The allocation process was previously manual and inefficient, leading to inadequate coach-program matching and inefficient use of coaches’ time. The organization needed a system that could automatically assign coaches to programs based on specific criteria such as coach availability, program preferences, and the number of students enrolled in each program.
+We developed a custom system that divides the academic year into different terms and assigns coaches to programs based on a set of criteria. The system filters coaches based on their preferences and allocates them to programs efficiently. It ensures that coaches do not have to travel excessively and that their total work time does not exceed a certain threshold. Once a coach is assigned to a program, they are allocated for subsequent program days, ensuring consistency.
+The development process will involve several stages:
+In terms of technology, we’ll use Python, a popular language for data analysis and machine learning. We’ll also use the Anaconda distribution, which provides a powerful environment for scientific computing and data analysis.
+The system is built on a custom logic implementation that filters programs for a particular date and checks the past history of the program to see if a coach was assigned before. If not, it allocates a new coach based on their availability and feasibility to reach the program location in time. A filtered list of coaches based on preferences like Age-Group and Level is created to aid this process.
+The implementation of the proposed solution has significantly improved the efficiency of the coach allocation process. The system has automated the allocation process, saving valuable time and resources that were previously spent on manual updates. It has also ensured that coaches are allocated in a way that minimizes travel and ensures that their total work time does not exceed a certain threshold.
+The code for the project has been pushed to GitHub:
+https://github.com/AjayBidyarthy/Esra-Salih
+https://docs.google.com/document/d/1guIe0J6dAbznJ0QuTA1YAHWvmmXdkBVlKLbO3PCxq4k/edit#heading=h.3pis0t8r68nf
+https://docs.google.com/spreadsheets/d/1nK-CknGIAVZkv0qUdHsRCdB5R6d86SLruqZWCN4OTT0/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1V9FaEF88B32dUClKNB88CEeufs6AUvMPQngRZx_vgCg/edit?usp=sharing
+Summarized: https://blackcoffer.com/
+This project was done by the Blackcoffer Team, a Global IT Consulting firm.
+This solution was designed and developed by Blackcoffer Team
+
+
+Here are my contact details:
+Firm Name: Blackcoffer Pvt. Ltd.
+Firm Website: www.blackcoffer.com
+Firm Address: 4/2, E-Extension, Shaym Vihar Phase 1, New Delhi 110043
+Email: ajay@blackcoffer.com
+WhatsApp: +91 9717367468
+Telegram: @asbidyarthy
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

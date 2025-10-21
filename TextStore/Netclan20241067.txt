@@ -1,0 +1,24 @@
+AI and NLP-based Solutions to Automate Data Discovery for Venture Capital and Private Equity Principals
+
+A leading Venture Capital and Private Equity Principals in the Globe
+Venture Capital and Private Equity Principals
+
+
+Private Equity, Venture Capital, Data Analysis, Fund Performance, Alternative Assets, Competitive Intelligence, Limited Partners, Customized Benchmarks, Service Providers, Fund of Funds, M&A, and Financial Services
+Flask, Spacy, NLTK, pandas, numpy, transformers, elasticsearch etc.
+Question answering in NLP, web scraping, web application Flask, Python
+Distil-bert model, en-core-web-sm (pre trained model of spacy)
+NLP, Data Analysis, Flask web app, Pandas, Numpy, transformers, fastapi, elasticsearch etc.
+Elasticsearch database
+
+
+This funding-related data would be used in two ways. From this project, companies can find suitable investors for their startups. Companies can search for investors based on industry, verticals, etc., and find investors to help their startups.
+Investors can use it to find a startup in which they want to invest based on their preferences like industry, verticals, etc.
+Here are my contact details:
+Email: ajay@blackcoffer.com
+WhatsApp: +91 9717367468
+Telegram: @asbidyarthy
+For project discussions and daily updates, would you like to use Slack, Skype, Telegram, or Whatsapp? Please recommend, what would work best for you.
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

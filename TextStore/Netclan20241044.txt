@@ -1,0 +1,29 @@
+Sports Prediction Model for Multiple Sports Leagues
+
+
+A leading sports tech firm in the USA
+
+Sports Management, SaaS
+The client aimed to develop a sophisticated sports prediction model capable of forecasting game outcomes across five major sports leagues: NCAAFB, NHL, NFL, NBA, and MLB. The primary challenge was to leverage historical data and statistical inputs to accurately predict game winners. The project required integrating data from the SportRadar API, processing it efficiently, and utilizing machine learning techniques to train a predictive model. The ultimate goal was to provide real-time predictions that could assist in sports betting strategies or enhance fan engagement.
+The proposed solution involved creating a comprehensive sports prediction model using Python, leveraging the SportRadar API for data acquisition, and storing the data in Google Cloud Storage. The project was structured around a modular approach, with each sport having its dedicated script (`{sport_name}.py`) for data processing and model training. The development workflow included:
+– **Data Collection**: Utilizing the SportRadar API to gather historical data for the past 3-4 seasons.
+– **Data Processing**: Storing the data in Google Cloud Storage and processing it into a structured format suitable for model training.
+– **Model Training**: Preparing the data for model training, focusing on converting JSON data to tabular format and fetching relevant team stats.
+– **Prediction**: Developing the predictive model to forecast game outcomes based on historical data and statistical inputs.
+The implementation of the sports prediction model has the potential to significantly impact the sports betting and fan engagement industries. By providing accurate predictions of game outcomes, the model can assist in sports betting strategies or fan engagement activities by providing great insights. This can lead to improved decision-making processes, increased operational efficiency, and strategic planning within the sports betting and fan engagement industries.
+The sports prediction model project by Kason Karangwa is a significant step towards leveraging data science and machine learning to predict sports outcomes. The project not only addresses the technical challenges of data collection, processing, and model training but also has the potential to significantly impact the sports betting and fan engagement industries. With the successful completion of the project, Kason Karangwa has demonstrated the power of data science in predicting sports outcomes, setting a new standard for sports prediction models.
+Summarized: https://blackcoffer.com/
+This project was done by the Blackcoffer Team, a Global IT Consulting firm.
+This solution was designed and developed by Blackcoffer Team
+
+
+Here are my contact details:
+Firm Name: Blackcoffer Pvt. Ltd.
+Firm Website: www.blackcoffer.com
+Firm Address: 4/2, E-Extension, Shaym Vihar Phase 1, New Delhi 110043
+Email: ajay@blackcoffer.com
+WhatsApp: +91 9717367468
+Telegram: @asbidyarthy
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

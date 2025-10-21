@@ -1,0 +1,13 @@
+Amazon Buy Bot, an Automation AI tool to Auto-Checkouts
+
+A leading consulting firm in the USA
+Management consultant
+
+
+The main objective of this project is to build the automation tool to buy product on amazon.
+This project is basically completed using selenium and Python. All we have done is write a python script for automation using Selenium.
+Make some clicks use logics to check item is in stock or not. If the item is in stock then it buys the product otherwise repeat the process again.
+A simple python code which uses selenium web driver to do all work.
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

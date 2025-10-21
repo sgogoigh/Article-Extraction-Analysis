@@ -1,0 +1,11 @@
+Power BI Dashboard on Operations, Transactions, and Marketing Data, embedding the Dashboard to Web App
+
+A leading tech firm in the USA
+
+
+Consulting, Software, Marketing Solutions
+Create a dashboard with Assets Performance With react App. So users can evaluate with Key metrics from data analytics and forecasting.
+The client requires two pages:
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

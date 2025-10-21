@@ -1,0 +1,14 @@
+Google Data Studio Pipeline with GCP/MySQL
+
+A leading IT firm in Europe
+e-commerce, retail business, marketing, Consulting
+Creating a Data Pipeline to sync live data from FieldPulse to Google Data Studio using GCP/MySQL.
+There is a Virtual Machine up and running and MySQL in Google Cloud(GCP). Get the following live data from FieldPulse to Google Data Studio(GDS) for making Business Dashboard in GDS –
+Such that if data changes in FieldPulse , GDS Dashboard should update automatically.
+For fetching data from FieldPulse –
+For getting data from GCP MySQL to Google Data Studio(GDS) :
+Below are the services that we provided to client after completion of this project –
+Google Cloud Platform (GCP)
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

@@ -1,0 +1,13 @@
+AI Bot Audio to audio
+
+Application Architecture
+
+
+Below is the overview of the architecture for an AI audio-to-audio chatbot application leveraging OpenAI Whisper and ElevenLabs’ text-to-speech (TTS) API:
+Follow these steps to install and set up the project:
+Follow these steps to run the project:
+Here’s a brief description of the files in the project:
+Source codes: https://github.com/AjayBidyarthy/AI-Bot-Audio-to-audio
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

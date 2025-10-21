@@ -1,0 +1,78 @@
+Healthcare AI ChatBot using LLAMA, LLM, Langchain
+
+A leading healthcare tech firm in the USA
+
+
+The AI chatbot is required to assist eye care patients with various tasks, including booking appointments, tracking lens order statuses, reviewing patient dues, sending statements, and answering general questions about their eye exams and the practice.
+Develop and deploy a custom-trained AI chatbot using an open-source LLM model (such as Llama) to assist eye care patients. This solution will be implemented as a SaaS offering, enabling multiple hospitals and practices to utilize the chatbot. The project will include the training of the LLM model on custom data, development of APIs for dynamic data interaction, and deployment on optimized servers.
+By leveraging the power of open-source LLM models and custom training, this AI chatbot will significantly enhance patient interaction and operational efficiency for eye care providers.
+Sample Chat Scenarios
+
+
+Hello, this is John Doe. I would like to book an appointment at the eyecare location as soon as possible. I’m experiencing issues with my vision. Here are my details:
+Thank you for sharing the details. Could you please provide a phone number and email address?
+hello@blackcoffer.com
+Can you please confirm the following details?
+Thanks for the details. We have sent you an OTP on the registered email and phone number. Can you please enter the OTP?
+<<If location name is not found in our location API, the chatbot will ask for location again. If found, the chatbot saves the location ID for further use.>>
+Thank you for the validation. Please choose a provider from the list:
+I’ll go with Ales Bru.
+<<Validation of entered data, check if all required details are given. Check for available slots with provided preference.>>
+Thanks, I see the following open slots on June 10, 2024:
+I’ll take the 10:00 AM slot.
+Alright! Can you please confirm the following details?
+<<If the patient says data is not correct, ask which data is incorrect and have the user re-enter.>>
+Your appointment is scheduled. Thanks for choosing eyecare location! Is there anything else I can help you with?
+Thanks, have a great day!
+Hello, this is Olivia Brown. I’d like to book an eye examination appointment for my child at the eyecare hospital. My child has difficulty seeing the board at school. Here are the details:
+Thank you for sharing the details. Could you please provide an email address and date of birth?
+hello@blackcoffer.com
+, DOB is December 5, 2000
+Can you please confirm the following contact details?
+Thanks for the details. We have sent you an OTP on the registered email and phone number. Can you please enter the OTP?
+<<Validation of entered data>>
+<<Get List of Providers>>
+Thank you for the validation. Please choose a provider from the list:
+I’ll go with Dr. Emily Thompson.
+<<Validation of entered data, check if all required details are given>>
+<<API should convert next Tuesday’s date and send date to API>>
+<<Check for available slots with provided preference>>
+Let me check the availability of the appointment.
+I see the following open slots on June 18, 2024:
+Let’s book the 2:00 PM appointment.
+Alright! Can you please confirm the following details?
+Yes, they are correct!
+Your appointment is scheduled. Thanks for choosing eyecare location! Is there anything else I can help you with?
+Thanks, have a great day!
+Hello, I need to book an appointment.
+Sure, I can help with that. Could you please provide your name, date of birth, phone number, email, and reason for your visit?
+Thank you, John. Can I have your full name (first and last) and date of birth?
+Uh, John… I think it’s in your system.
+To ensure we have the correct information, I’ll need your full name (first and last) and date of birth. This helps us locate your records accurately.
+Oh, okay. It’s Johnathan Smith. I was born on April 3, 1982.
+<<Validation of data>>
+Thank you. Could you please provide a contact number and email?
+Um, hold on. I think it’s… (555) 123-7890? And I don’t have an email address.
+<<Validation of data>>
+Thank you. Just to confirm, your contact number is (555) 123-7890, correct?
+<<Validation of data>>
+Thanks for the details. We have sent you an OTP on the registered phone number. Can you please enter the OTP?
+<<Validation of data entered>>
+<<Get List of Providers>>
+Thank you for the validation. Please choose the reason for your visit from the following:
+Great. Do you have any preferred dates and times for your appointment?
+Anytime next week is fine.
+Okay, let me check our availability for next week. Do you prefer mornings or afternoons?
+Uh, mornings, I guess.
+<<Validation of data>>
+<<Get List of Providers>>
+<<API call to get providers>>
+Please choose a provider from the list:
+I’ll choose Dr. Robert Anderson.
+<<Check for available slots with provided preference>>
+I see the following open slots for next week:
+Let’s book the Monday, 10:00 AM appointment.
+Alright! Can you please confirm the following details?
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

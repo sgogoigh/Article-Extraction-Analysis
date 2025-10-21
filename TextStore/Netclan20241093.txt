@@ -1,0 +1,15 @@
+Design & Develop BERT Question Answering model explanations with visualization
+
+A Leading Tech Firm in the USA
+
+
+We need to use a pre-trained bert question answering model and create a notebook that has explanations of model’s working with some visuals of bertviz, allennlp and gradient values.
+A notebook which has an explanation of the bert question answering model using some visualization.
+Google colab notebooks, Tensorflow, Bertviz, Allennlp, Transformers
+Python programming language, Deep learning, NLP, Data Visualization
+Pretrained bert-base-uncased model and distilbert model (both trained on squad2 dataset)
+Data visualization, Deep learning, NLP, python
+Among these models we kept the best one.
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

@@ -1,0 +1,10 @@
+Budget, Sales KPI Dashboard using Power BI
+
+Data Visualization Deliverables
+Data Visualization Tools
+
+
+Data Visualization Languages
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

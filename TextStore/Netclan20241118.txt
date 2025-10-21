@@ -1,0 +1,14 @@
+Real-time dashboard to monitor infrastructure activity and Machines
+
+A leading tech firm in Europe
+
+
+For the current project, we hope to develop a real-time dashboard (* it updates every several minutes). Currently, we have multiple Ubuntu machines that are sending messages every minute to Apache Pulsar.
+Developing a realtime updating dashboard to display the metadata of various machines on a server from pandio queue.
+The dahboard must display the count of “inactive” , “active” and “down” servers with a table displaying the details of all the machines in different color scheme for each type of server/machine.
+Development hosted URL
+
+
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

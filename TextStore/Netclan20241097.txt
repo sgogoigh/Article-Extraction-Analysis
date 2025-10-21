@@ -1,0 +1,11 @@
+An agent-based model of a Virtual Power Plant (VPP)
+
+A Leading Energy Firm in the USA
+
+
+Power, Energy, Distribution
+To create an agent based model of a virtual power plant in Netlogo. To see the function of multiple such power plants that worked simultaneously. These power plants created and supplied energy based on a demand parameter that can be controlled by the observer
+https://www.youtube.com/watch?v=1fzCUzZ0q0Q&ab_channel=Blackcoffer
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

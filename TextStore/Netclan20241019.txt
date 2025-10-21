@@ -1,0 +1,26 @@
+ROAS Dashboard for Campaign-Wise Google Ads Budget Tracking Using Google Ads AP
+
+A leading IT & tech firm in the USA
+IT Consulting, IT Support, SaaS
+Create a ROASing dashboard to fetch google ads budget spent data using google ads api(campaign-wise). The challenge is to develop a ROAS (Return on Ad Spend) dashboard that efficiently retrieves and displays Google Ads budget spent data on a campaign-wise basis using the Google Ads API. The current system lacks a streamlined method for tracking and analyzing ad spend across various campaigns, leading to difficulties in assessing performance and optimizing budget allocation. The goal is to create a comprehensive dashboard that accurately fetches and visualizes budget data, enabling more effective analysis and decision-making. This involves integrating with the Google Ads API, ensuring data accuracy, and providing clear, actionable insights for better campaign management.
+Support and Maintenance
+
+Getting the Google Ads campaigns data
+
+Used the google Ads APIs
+
+Summarized: https://blackcoffer.com/
+This project was done by the Blackcoffer Team, a Global IT Consulting firm.
+This solution was designed and developed by Blackcoffer Team
+
+
+Here are my contact details:
+Firm Name: Blackcoffer Pvt. Ltd.
+Firm Website: www.blackcoffer.com
+Firm Address: 4/2, E-Extension, Shaym Vihar Phase 1, New Delhi 110043
+Email: ajay@blackcoffer.com
+WhatsApp: +91 9717367468
+Telegram: @asbidyarthy
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

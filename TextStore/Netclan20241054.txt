@@ -1,0 +1,28 @@
+AI Chatbot using LLM, Langchain, LLama
+
+The primary objective of the is to develop a highly efficient AI chatbot tailored for eye care patients. The chatbot will assist in booking appointments, tracking the status of lens orders, reviewing patient dues, sending statements, and answering general questions about their exams and the practice. It will integrate custom-trained QLoRA models using open-source LLMs, Twilio for SMS communication, and Retrieval-Augmented Generation (RAG) for handling confidential data using vector databases like ChromaDB. The AI related APIs will be developed using FastAPI/Flask, and additional functionalities such as booking, appointment handling, dues management, and order tracking will be managed by the backend system.
+Solution Architecture
+
+
+The solution architecture is designed to integrate various components to provide a seamless user experience. The architecture includes:
+QLoRA is the extended version of LoRA which works by quantizing the precision of the weight parameters in the pre-trained LLM to 4-bit precision. Typically, parameters of trained models are stored in a 32-bit format, but QLoRA compresses them to a 4-bit format. This reduces the memory footprint of the LLM, making it possible to finetune it on a single GPU. This method significantly reduces the memory footprint, making it possible to run LLM models on less powerful hardware, including consumer GPUs.
+The QLoRA model training involves the following steps:
+LLM Selection: Mistral 7B / Llama 2 7B / Llama 3 8B
+The selection of the LLM (Large Language Model) will be based on the performance evaluation of three open-source models: Mistral 7B, Llama 2 7B, and Llama 3 8B. The primary criteria for selection include:
+Each model will be subjected to a series of tests designed to measure their performance in real-world scenarios. These tests will include:
+The final selection will be made based on the comprehensive evaluation of the models during the testing phase. The model that demonstrates the best overall performance in terms of accuracy, efficiency, and scalability will be chosen for deployment. This approach ensures that the chosen model will not only meet the current requirements but will also be capable of scaling with future needs, providing a robust and reliable solution for the AI chatbot.
+By focusing on models that are optimized for both CPUs and low VRAM GPUs, we ensure cost-effective deployment and operation, making the solution accessible and sustainable for a wide range of applications.
+Milestone Documentation➖
+Milestone 1: Initial Setup and Model Training
+Milestone 2: Frontend/Backend Development and Integration
+Milestone 3: Payment Gateway Integration
+Milestone 4: Deployment and Testing
+Deployment and Testing
+
+
+Milestone 6: Documentation & Maintenance
+AI audio and text conversational bot using livekit
+
+
+AI Receptionist | Voice Call Center | AI Lawyer | AI Sales Representative | AI Representative | AI Doctor | AI Coach | AI...
+Face Recognition with Deepfills Framework – Deepface

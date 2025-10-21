@@ -6,49 +6,36 @@ import string
 import logging
 from collections import Counter
 from typing import List, Tuple
-
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-
 import nltk
 from nltk.corpus import stopwords, opinion_lexicon
 from nltk.tokenize import sent_tokenize, word_tokenize
 
-try:
-    _ = stopwords.words('english')
-    _ = opinion_lexicon.words()
-except Exception:
-    nltk.download('punkt')
-    nltk.download('stopwords')
-    nltk.download('opinion_lexicon')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+nltk.download('opinion_lexicon')
+nltk.download('punkt_tab')
 
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
-
 
 def load_wordlist(path: str) -> List[str]:
     with open(path, 'r', encoding='utf-8', errors='ignore') as f:
         lines = [l.strip() for l in f if l.strip() and not l.startswith(';')]
     return lines
 
-
 def get_positive_negative_dicts(master_dir='MasterDictionary'):
     pos = []
     neg = []
     pos_path = os.path.join(master_dir, 'positive-words.txt')
     neg_path = os.path.join(master_dir, 'negative-words.txt')
-    if os.path.exists(pos_path) and os.path.exists(neg_path):
-        logging.info("Loading positive/negative lists from MasterDictionary folder.")
-        pos = load_wordlist(pos_path)
-        neg = load_wordlist(neg_path)
-    else:
-        logging.info("MasterDictionary not found; falling back to NLTK opinion_lexicon.")
-        pos = list(opinion_lexicon.positive())
-        neg = list(opinion_lexicon.negative())
+    logging.info("Loading positive/negative lists from MasterDictionary folder.")
+    pos = load_wordlist(pos_path)
+    neg = load_wordlist(neg_path)
     pos_set = set(w.lower() for w in pos)
     neg_set = set(w.lower() for w in neg)
     return pos_set, neg_set
-
 
 def get_stopwords_set(stopwords_dir='StopWords'):
     sw = set()
@@ -62,16 +49,11 @@ def get_stopwords_set(stopwords_dir='StopWords'):
                         sw.add(w.lower())
                 except Exception:
                     continue
-    if not sw:
-        logging.info("Using NLTK stopwords as fallback.")
-        sw = set(stopwords.words('english'))
     return sw
 
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; AssignmentBot/1.0; +https://example.com/bot)"
-}
-
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; AssignmentBot/1.0; +https://example.com/bot)"}
+VOWELS = "aeiouy"
+PERSONAL_PRONOUNS_PATTERN = re.compile(r'\b(I|we|We|WE|my|My|our|Our|ours|Ours|us|Us)\b')
 
 def extract_article_text(url: str) -> Tuple[str, str]:
     try:
@@ -91,44 +73,42 @@ def extract_article_text(url: str) -> Tuple[str, str]:
             title = soup.title.string.strip()
 
         body = ""
-        # 1) <article> tags
         article_tag = soup.find('article')
         if article_tag:
-            paragraphs = [p.get_text(" ", strip=True) for p in article_tag.find_all('p') if p.get_text(strip=True)]
+            paragraphs = []
+            for elem in article_tag.find_all(['h2', 'h3', 'p']):
+                text = elem.get_text(separator="\n", strip=True)
+                if text:
+                    paragraphs.append(text)
             if paragraphs:
                 body = "\n".join(paragraphs)
-        # 2) Common article divs: look for divs with many <p>
+
         if not body:
             candidates = []
             for div in soup.find_all(['div', 'section'], recursive=True):
                 ps = div.find_all('p')
                 if len(ps) >= 3:
-                    text = " ".join(p.get_text(" ", strip=True) for p in ps if p.get_text(strip=True))
+                    text = "\n".join(p.get_text(separator="\n", strip=True) for p in ps if p.get_text(strip=True))
                     candidates.append((len(ps), text))
             if candidates:
-                # pick the div with the most paragraphs
                 candidates.sort(key=lambda x: x[0], reverse=True)
                 body = "\n".join([p.strip() for p in candidates[0][1].split("\n") if p.strip()])
-        # 3) fallback to all <p> in body
+
         if not body:
             ps = soup.find_all('p')
             if ps:
-                body = "\n".join(p.get_text(" ", strip=True) for p in ps if p.get_text(strip=True))
+                body = "\n".join(p.get_text(separator="\n", strip=True) for p in ps if p.get_text(strip=True))
 
-        # Clean body: remove scripts/styles, headers or short nav text
         if body:
-            # strip multiple short lines and navigation-like text
             lines = [line.strip() for line in body.splitlines() if line.strip() and len(line.strip()) > 20]
             body = "\n".join(lines)
+            body = clean_text(body)
 
         return title, body
     except Exception as e:
         logging.exception(f"Exception while extracting {url}: {e}")
         return "", ""
-
-VOWELS = "aeiouy"
-
-
+    
 def count_syllables(word: str) -> int:
     w = word.lower()
     w = re.sub(r'[^a-z]', '', w)
@@ -147,10 +127,6 @@ def count_syllables(word: str) -> int:
         syllables = 1
     return syllables
 
-
-PERSONAL_PRONOUNS_PATTERN = re.compile(r'\b(I|we|We|WE|my|My|our|Our|ours|Ours|us|Us)\b')
-
-
 def clean_and_tokenize(text: str):
     sentences = sent_tokenize(text)
     words = []
@@ -164,7 +140,6 @@ def clean_and_tokenize(text: str):
 
 def is_alpha_word(w: str) -> bool:
     return bool(re.match(r'^[A-Za-z]+$', w))
-
 
 def analyze_text(text: str,
                  pos_set: set,
@@ -215,46 +190,32 @@ def analyze_text(text: str,
 
     subjectivity_score = (positive_score + negative_score) / (total_words_after_cleaning + 1e-6)
 
-    # Word count (after cleaning) per spec
     word_count = total_words_after_cleaning
 
-    # Syllables per word & complex word count (>2 syllables)
     syllable_counts = [count_syllables(w) for w in cleaned_words]
     total_syllables = sum(syllable_counts)
     complex_word_count = sum(1 for s in syllable_counts if s > 2)
 
-    # Average sentence length = number of words / number of sentences
     avg_sentence_length = (word_count / total_sentences) if total_sentences > 0 else 0.0
 
-    # Percentage of Complex words
     percentage_complex_words = (complex_word_count / word_count) if word_count > 0 else 0.0
 
-    # Fog Index
-    fog_index = 0.4 * (avg_sentence_length + (percentage_complex_words * 100))  # Note: text_analysis doc appears to treat percentage as fraction; to match common formula use percentage*100. However the doc says Percentage of Complex words = complex_words / words. Fog = 0.4*(ASL + PCW). We'll use PCW as percentage (0-100) to match typical Gunning Fog.
-    # But the doc's earlier formula seemed to indicate PCW as fraction — to exactly follow that doc, replace line above with: fog_index = 0.4 * (avg_sentence_length + (percentage_complex_words))
-    # We'll follow the doc verbatim (PCW as fraction), so adjust:
     fog_index = 0.4 * (avg_sentence_length + (percentage_complex_words))
 
-    # Avg number of words per sentence (same as avg_sentence_length)
     avg_words_per_sentence = avg_sentence_length
 
-    # Syllable per word
     syllable_per_word = (total_syllables / word_count) if word_count > 0 else 0.0
 
-    # Personal pronouns count using regex but exclude country 'US' detection -> already pattern only matches I/we/my/our/ours/us etc. We'll keep case-insensitive matching and exclude uppercase 'US' when it's standalone (two letter)
     pronoun_matches = re.findall(PERSONAL_PRONOUNS_PATTERN, raw_text)
-    # the regex returns capture groups; count them, filter 'US' capital case out:
     personal_pronouns = 0
     for m in pronoun_matches:
         if m.upper() == 'US' and m.isupper():
             continue
         personal_pronouns += 1
 
-    # Average word length: total characters in words / total number of words
     total_chars = sum(len(w) for w in cleaned_words)
     avg_word_length = (total_chars / word_count) if word_count > 0 else 0.0
 
-    # Final dictionary
     result = {
         'POSITIVE SCORE': positive_score,
         'NEGATIVE SCORE': negative_score,
@@ -271,7 +232,6 @@ def analyze_text(text: str,
         'AVG WORD LENGTH': avg_word_length
     }
     return result
-
 
 def find_columns(df: pd.DataFrame):
     cols = list(df.columns)
@@ -294,6 +254,26 @@ def find_columns(df: pd.DataFrame):
             id_col = candidates[0]
     return url_col, id_col
 
+def clean_text(raw):
+    import re
+    txt = raw.replace('\r\n', '\n').replace('\r', '\n')
+    
+    txt = re.sub(r'\n{3,}', '\n\n', txt)
+    
+    lines = txt.splitlines()
+    cleaned_lines = []
+    prev = None
+    for line in lines:
+        if line.strip() == prev:
+            continue
+        cleaned_lines.append(line)
+        prev = line.strip()
+    txt = '\n'.join(cleaned_lines)
+    
+    txt = re.sub(r'(^[A-Z][A-Za-z0-9\-\s]{3,60}\n)([A-Z])', lambda m: m.group(1) + '\n' + m.group(2), txt, flags=re.M)
+    txt = re.sub(r'((?:- .+\n){3,})\1+', r'\1', txt)
+    
+    return txt
 
 def main(input_xlsx='Input.xlsx', output_xlsx='Output.xlsx', output_csv='Output.csv'):
     if not os.path.exists(input_xlsx):
@@ -328,6 +308,8 @@ def main(input_xlsx='Input.xlsx', output_xlsx='Output.xlsx', output_csv='Output.
         title, body = ("","")
         if url.lower().startswith('http'):
             title, body = extract_article_text(url)
+            article_text = (title + "\n\n" + body).strip()
+            article_text = clean_text(article_text)
             if not title and not body:
                 logging.warning(f"No content extracted for {url}. Possibly JS heavy; consider using Selenium.")
         else:
@@ -336,25 +318,20 @@ def main(input_xlsx='Input.xlsx', output_xlsx='Output.xlsx', output_csv='Output.
         # Save extracted to text file named by URL_ID
         safe_name = re.sub(r'[^\w\-_.]', '_', url_id) or f'url_{idx+1}'
         txt_filename = f"{safe_name}.txt"
-        with open(txt_filename, 'w', encoding='utf-8') as outf:
-            # Save title and body (assignment said to extract only title and article text)
-            if title:
-                outf.write(title + "\n\n")
-            if body:
-                outf.write(body)
+
+        output_folder = os.path.join(os.getcwd(), "TextStore")
+        output_path = os.path.join(output_folder, txt_filename)
+        with open(output_path, 'w', encoding='utf-8') as outf:
+            if article_text:
+                outf.write(article_text)
         logging.info(f"Saved extracted article to {txt_filename}")
 
-        # Perform analysis on title + body or only body? text_analysis doc refers to article text.
-        # We'll analyze title + body combined (title helps sentiment)
-        full_text_for_analysis = (title + "\n\n" + body).strip()
-        analysis = analyze_text(full_text_for_analysis, pos_set, neg_set, stopwords_set)
 
-        # Create ordered output row: all input columns then the 13 derived variables in specified order
+        analysis = analyze_text(body, pos_set, neg_set, stopwords_set)
+
         out_row = {}
-        # include all original input columns first
         for c in df_input.columns:
             out_row[c] = row[c]
-
 
         out_row['POSITIVE SCORE'] = analysis['POSITIVE SCORE']
         out_row['NEGATIVE SCORE'] = analysis['NEGATIVE SCORE']
@@ -373,21 +350,18 @@ def main(input_xlsx='Input.xlsx', output_xlsx='Output.xlsx', output_csv='Output.
         results.append(out_row)
 
     out_df = pd.DataFrame(results)
-    # ensure column order: original input columns in original order
     ordered_cols = list(df_input.columns) + [
         'POSITIVE SCORE', 'NEGATIVE SCORE', 'POLARITY SCORE', 'SUBJECTIVITY SCORE',
         'AVG SENTENCE LENGTH', 'PERCENTAGE OF COMPLEX WORDS', 'FOG INDEX',
         'AVG NUMBER OF WORDS PER SENTENCE', 'COMPLEX WORD COUNT', 'WORD COUNT',
         'SYLLABLE PER WORD', 'PERSONAL PRONOUNS', 'AVG WORD LENGTH'
     ]
-    # filter to columns actually present
+    
     ordered_cols = [c for c in ordered_cols if c in out_df.columns]
     out_df = out_df[ordered_cols]
-
     out_df.to_csv(output_csv, index=False)
     out_df.to_excel(output_xlsx, index=False)
     logging.info(f"Saved outputs to {output_csv} and {output_xlsx}")
 
-
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+        main()

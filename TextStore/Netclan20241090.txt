@@ -1,0 +1,9 @@
+Trading Bot for FOREX
+
+A Leading Trading Firm in the USA
+
+
+Client requirements were  to automate his forex trading strategy  on Meta Trader4 terminal, so that he doesn’t have to bother trading anymore, the Python script we designed to not only do it, plus it offers a safe exit point for Ongoing Trades, that saved the client’s money and time.
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

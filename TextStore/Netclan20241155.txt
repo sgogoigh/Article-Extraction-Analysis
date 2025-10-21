@@ -1,0 +1,14 @@
+Data ETL: Local Service Ads Leads to BigQuery
+
+A leading Marketing firm in the USA
+
+
+Upload daily data from Google Local Service Ads dashboard to BigQuery database.
+A working deployed automated tool that runs everyday in the morning hours and uploads a report to database. Tool is monitored everyday.
+Data extraction, cleaning and summarising
+BigQuery –  lsa_lead_daily_data
+Making sure that the data uploaded is for the right company.
+Monitoring daily logs and uploads for some time and making sure data was correct
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

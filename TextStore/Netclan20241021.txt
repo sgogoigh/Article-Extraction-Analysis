@@ -1,0 +1,27 @@
+Development of EA Robot for Automated Trading
+
+
+The goal of this project is to build an Expert Advisor (EA) Robot that automates trading by using predictions generated from a machine learning (ML) model. The EA will operate in real-time, leveraging both historical and live data to make buy/sell decisions. Data can be obtained via two primary methods:
+Additionally, the EA Robot will use an MQL5 script that defines the trading strategy, enabling automated trading on any MetaTrader 5 (MT5) platform. The core focus is to train an ML model for predictive trading, integrate data streams, and implement a scalable MQL5 strategy for execution.
+2. Data Retrieval and Preparation
+3. Model Development and Training
+4. Backtesting and Performance Evaluation
+5. Real-Time Data Integration
+6. MQL5 Script Development
+_________________________________________________________________________
+This approach ensures the development of a robust, data-driven EA Robot that integrates ML predictions with real-time trading platforms and APIs. It also guarantees flexibility for live trading on various currency pairs and adaptability to changing market conditions.
+This solution was designed and developed by Blackcoffer Team
+
+
+Here are my contact details:
+Firm Name: Blackcoffer Pvt. Ltd.
+Firm Website: www.blackcoffer.com
+Firm Address: 4/2, E-Extension, Shaym Vihar Phase 1, New Delhi 110043
+Email: ajay@blackcoffer.com
+WhatsApp: +91 9717367468
+Telegram: @asbidyarthy
+AI audio and text conversational bot using livekit
+
+
+AI Receptionist | Voice Call Center | AI Lawyer | AI Sales Representative | AI Representative | AI Doctor | AI Coach | AI...
+Face Recognition with Deepfills Framework – Deepface

@@ -1,7 +1,0 @@
-pip install parcel --user
-pip install beautifulsoup4 requests --user
-pip install html5lib --user
-pip install bs4 --user
-pip install urllib --user
-pip install xlrd --user
-pip install openpyxl --user

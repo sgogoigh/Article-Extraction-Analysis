@@ -1,0 +1,19 @@
+AI-Based Algorithmic Trading Bot for Forex
+
+
+A leading trading firm in the USA
+
+Trading, Banking, Investment
+Pandas, numpy, scikit-learn, tensorflow, flask etc.
+Data Analysis, Data Visualization, Machine learning, Deep learning, flask web app etc.
+Logistic Regression, LSTM model
+Data Analysis, Data Visualization, Machine learning, Deep learning, flask, python etc.
+It will help traders to predict the stock market earlier and get better returns from this project.
+Here are my contact details:
+Email: ajay@blackcoffer.com
+WhatsApp: +91 9717367468
+Telegram: @asbidyarthy
+For project discussions and daily updates, would you like to use Slack, Skype, Telegram, or Whatsapp? Please recommend, what would work best for you.
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

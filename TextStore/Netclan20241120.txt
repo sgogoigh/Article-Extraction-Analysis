@@ -1,0 +1,9 @@
+Power BI Data-Driven Map Dashboard
+
+
+A leading marketing firm in the USA
+
+Marketing, Consultancy
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

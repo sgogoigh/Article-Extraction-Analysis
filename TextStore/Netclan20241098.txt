@@ -1,0 +1,20 @@
+Transform API into SDK library and widget
+
+
+A Leading Tech Firm in the USA
+
+Consulting, Marketing, Healthtech
+Convert API documentation into SDK library and widget. Expected deliverables are SDK library and widgets for
+API documentation is available for a tool that allows customers to type in their medication and find the cheapest price near them. For partners who want to have it on their own site, currently using the API documentation but would like to ultimately be able to send them an embeddable widget that incorporates the tool on their site
+We created a flutter widget that uses  SDK libraries that allows the customer to type their medication and find the cheapest price near them.
+This widget can be embedded in their web, android and IOS applications
+2)Sample flutter application
+1)Knowledge of dart language
+2)flutter app developing
+1 )Problems while fetching details of drugs and pharmacies
+2) Showing details of drugs and pharmacies in the widget
+All technical challenges are solved by proper communication with the client and by logical analyzing of data
+https://www.youtube.com/watch?v=MyNK_DPtsKA&ab_channel=Blackcoffer
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

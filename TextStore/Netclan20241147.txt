@@ -1,0 +1,23 @@
+Real Estate Data Warehouse
+
+
+A leading Real Estate firm in the EU
+
+The objective of this project is to build a data warehouse from a website given search and filter criteria.
+The objective of this project is to collect data from a website given search and filter criteria.
+Contains a list of the federal states in Germany to Crawl:
+https://en.wikipedia.org/wiki/States_of_Germany
+We have developed a Python tool that crawls and scrapes all the apartment listings for all the states in Germany under each category namely: mieten wohnungen, kaufen wohnungen, kaufen anlageobjekte and kaufen grundstuck. The Scrapy library has been used to crawl and scrape. Beautiful soup could have also been used for the scraping purpose, but for the sake of consistency, Scrapy has been used for both purposes.
+Scrapy is an application framework for crawling web sites and extracting structured data which can be used for a wide range of useful applications, like data mining, information processing or historical archival.
+Even though Scrapy was originally designed for
+, it can also be used to extract data using APIs (such as
+Amazon Associates Web Services
+) or as a general purpose web crawler.
+Four Spiders have been created for each category to be scraped. Every spider crawls all the states in Germany and scrapes all the apartment listings for important data. Every spider creates a separate JSON file to store all its data. This data is then converted to CSV using another python script called “conversion”.
+The python tool has been completely automated and only needs the “Controller” script to be run. The script also has the capability of running every two weeks automatically.
+Four CSV files (one for each category):
+Kaufen Anlageobjekte.csv
+Kaufen Grundstuck.csv
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

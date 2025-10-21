@@ -1,0 +1,18 @@
+Marketing Tool to Notify Leads to Clients over Email and Phone
+
+A leading Marketing firm in the USA
+
+
+Prepare a daily report for data from Local Service Ads dashboard and email to client.
+A working deployed automated tool that runs everyday in the morning hours and sends a report to the client. Tool is monitored everyday.
+Data extraction, cleaning, and summarising
+Data is not stored and is sent directly to the client
+
+
+Ensuring a company’s data does not go to another company
+Testing on multiple dummy email ids
+
+
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

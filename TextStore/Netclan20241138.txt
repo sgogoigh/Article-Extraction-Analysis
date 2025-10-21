@@ -1,0 +1,11 @@
+A Leading Firm in the USA, Website SEO & Optimization
+
+A leading marketing firm in the USA
+
+
+Fixing On-Page SEO of the website
+Fixing On-Page SEO contains things like title, meta description, image-alt text, broken links, 404 error page, multiple h1 tag in one page, duplicate title/description, dynamic URL, sparse content page (word count <500), etc.
+https://www.jupiteroutdoorcenter.com/
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

@@ -1,0 +1,22 @@
+Advanced AI for Handgun Detection
+
+
+A leading tech firm in the Middle East
+
+Detecting Handguns in images and videos.
+We use Yolov7 instance segmentation model to detect and provide coordinates for handguns.
+Trained model of yolov7 instance segmentation
+
+
+Retrieving handgun images in bulk from opensource.
+Found Openimages dataset with good amount of required images
+
+
+Here are my contact details:
+Email: ajay@blackcoffer.com
+WhatsApp: +91 9717367468
+Telegram: @asbidyarthy
+For project discussions and daily updates, would you like to use Slack, Skype, Telegram, or Whatsapp? Please recommend, what would work best for you.
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

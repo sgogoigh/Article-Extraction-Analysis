@@ -1,0 +1,21 @@
+Marketing Analytics to Automate Leads Call Status and Reporting
+
+A leading Marketing firm in the USA
+
+
+Prepare a daily report for the companies and upload it to Google Sheets. Data is from callrail and contains all call information about a company.
+Use CallRail API to get data from database.
+Filter out excess data
+Upload to Google Sheets
+
+
+A working deployed automated tool that runs once a day in the morning hours and uploads the data to Google Sheets. Tool is monitored daily.
+Data extraction, cleaning and summarising
+Google Sheets –   Call status record
+Ensuring proper amendment of data to sheets without overwrite
+
+Proper monitoring before final deployment
+
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture

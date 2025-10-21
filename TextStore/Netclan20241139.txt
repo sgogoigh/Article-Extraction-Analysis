@@ -1,0 +1,13 @@
+A Leading Musical Instrumental, Website SEO & Optimization
+
+A leading marketing firm in the USA
+
+
+Connect website to Google Tag Manager.
+Remove all previously added code and add new code for connecting to Google Tag Manager.
+Remove 5xx error from the website.
+Website connected to Google Tag Manager successfully.
+https://www.hamiltonpianoco.com/
+From Complexity to Clarity: Transforming Data into Decisions through Mixed Modelling
+AWS CodePipeline is utilized for automatically building and deploying Lambda functions in AWS
+Dockerize the AWS Lambda for serverless architecture
